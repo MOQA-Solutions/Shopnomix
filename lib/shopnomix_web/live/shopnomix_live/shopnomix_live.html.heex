@@ -1,0 +1,41 @@
+<%= if @live_action == :index do %>
+  <.live_component module={ShopnomixWeb.ShopnomixLive.Index} id={:index} />
+<% end %>
+
+<%= if @live_action == :insert do %>
+  <.live_component
+    module={ShopnomixWeb.ShopnomixLive.Insert}
+    id={:insert}
+    data={@data}
+    form={@form}
+  />
+<% end %>
+
+<%= if @live_action == :delete do %>
+  <.live_component
+    module={ShopnomixWeb.ShopnomixLive.Delete}
+    id={:delete}
+    data={@data}
+    form={@form}
+  />
+<% end %>
+
+<%= if @live_action == :replace do %>
+  <.live_component
+    module={ShopnomixWeb.ShopnomixLive.Replace}
+    id={:replace}
+    data={@data}
+    form={@form}
+  />
+<% end %>
+
+<%= if @live_action == :search do %>
+  <.live_component
+    module={ShopnomixWeb.ShopnomixLive.Search}
+    id={:search}
+    data={@data}
+    form={@form}
+    search={@search}
+    search_data={@search_data}
+  />
+<% end %>
